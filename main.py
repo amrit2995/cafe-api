@@ -43,7 +43,6 @@ def get_random_cafe():
 @app.route("/all")
 def get_all():
     cafes = Cafe.query.all()
-    # cafes_dict = {'cafes': [cafe.to_dict() for cafe in cafes]}
     return jsonify(cafes=[cafe.to_dict() for cafe in cafes])
 
 
